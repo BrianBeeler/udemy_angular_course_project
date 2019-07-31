@@ -1,11 +1,14 @@
-<div class="row">
+    <div class="row">
         <div class="col-xs-12"><button class="btn btn-success">New Recipe</button></div>
     </div>
     <hr>
     <div class="row">
         <div class="col-xs-12">
-            <app-recipe-item  
+            <a app-recipe-item
+                href="#" class="list-group-item clearfix" 
                 *ngFor="let recipeEl of recipes" 
-                [recipe]="recipeEl"></app-recipe-item>
+                [recipe]="recipeEl"
+                (click)="recipeClicked(recipeEl)"
+                ></a>
         </div>
     </div>   
