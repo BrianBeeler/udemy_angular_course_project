@@ -1,11 +1,11 @@
 <!-- Header -->
-<app-header></app-header>
+<app-header (sectionChanged)="onSectionChanged($event)"></app-header>
 <!-- Shopping List -->
 
 <div class="container">
-      <app-recipe></app-recipe>
-      <hr> 
-      <app-shopping-list></app-shopping-list>
+      <app-recipe *ngIf="currentSection === 'recipe' "></app-recipe>
+      <!-- <hr>  -->
+      <app-shopping-list *ngIf="currentSection === 'shopping-list'"></app-shopping-list>
 </div>
 
 

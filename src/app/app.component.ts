@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project';
+  currentSection = 'recipe';
+  onSectionChanged(newSection) {
+    this.currentSection = newSection;
+  }
 }
